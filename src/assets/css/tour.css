@@ -1,0 +1,71 @@
+/* header */
+#intro {
+    background: transparent url('../images/banner01.jpg') 50% 50%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#main {
+    height: 100%;
+    padding-top: 120px;
+}
+
+.region-box {
+    width: 768px;
+    height: 110px;
+    margin-bottom: 120px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 8px #0000004B;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.region-select {
+    margin: 30px 18px;
+    padding: 12px;
+    height: 50px;
+    width: 270px;
+    background: #EBEBEB 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+
+.search {
+    color: #FFFFFF;
+    text-shadow: rgb(46, 46, 46) 0px 5px 10px;
+    height: 50px;
+    width: 140px;
+    background: #E8CB89 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+}
+
+/* nav */
+nav {
+    text-shadow: rgb(46, 46, 46) 0px 5px 10px;
+    color: rgba(255, 255, 255, 1);
+    opacity: 1;
+}
+
+.navbar {
+    padding: 30px 0;
+}
+
+.logo-text {
+    letter-spacing: 1.54px;
+}
+
+.link-text {
+    letter-spacing: 1.26px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0 20px;
+}
