@@ -7,11 +7,16 @@
             </div>
             <div id="region">
                 <div class="region-box">
-                    <select class="region-select" name="" id="">
-                        <option>北部地區</option>
+                    <select class="region-select" name="region" id="region" v-model="region">
+                        <option v-for="(region, index) in regions" :key="index" :value="index">
+                            {{ region }}
+                        </option>
                     </select>
-                    <select class="region-select" name="" id="">
-                        <option>台北市</option>
+                    <select class="region-select" name="country" id="country" v-model="county">
+                        <option value="" disabled>請選擇</option>
+                        <option v-for="(item, index) in counties" :key="index" :value="item.value">
+                            {{ item.county }}
+                        </option>
                     </select>
                     <button class="search" type="button">Search</button>
                 </div>
@@ -34,7 +39,27 @@
 </template>
 
 <script>
+import select from "../select";
+
 export default {
+    data() {
+        return {
+            region: 0,
+            county: '',
+            regions: [],
+            counties: [],
+        };
+    },
+    mounted() {
+        this.regions = select.regions;
+        this.counties = select.counties[this.region];
+    },
+    watch: {
+        region() {
+            this.counties = select.counties[this.region];
+            this.county = '';
+        }
+    },
     name: "Tour",
 };
 </script>
